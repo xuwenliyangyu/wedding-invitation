@@ -493,7 +493,7 @@
       记录我们最好的模样 · 点击照片可查看大图
     </p>
     <div class="gallery" id="gallery"></div>
-    <div class="g-count reveal d3">共 40 张 · 期待与您分享这份美好</div>
+    <div class="g-count reveal d3">共 9 张 · 期待与您分享这份美好</div>
   </div>
 </section>
 
@@ -713,15 +713,8 @@ const STORAGE_KEY = "wedding_blessings_xuwen_liyangyu";
 (function gallery(){
   // photos/wedding/ 目录下的婚纱照片文件名（按顺序展示）
   const WED_PHOTOS = [
-    "HHH_3774.jpg","HHH_3800.jpg","HHH_3979.jpg","HHH_4076.jpg","HHH_4134.jpg",
-    "HHH_4143.jpg","HHH_4302.jpg","HHH_4308.jpg","HHH_4374.jpg","HHH_4394.jpg",
-    "HHH_4418.jpg","HHH_4503.jpg","HHH_4661.jpg","HHH_4664.jpg","HHH_4670.jpg",
-    "HHH_4834.jpg","HHH_4940.jpg","HHH_4974.jpg","HHH_5026.jpg","HHH_5098.jpg",
-    "HHH_5165.jpg","HHH_5225.jpg","HHH_5231.jpg","HHH_5237.jpg","HHH_5249.jpg",
-    "HHH_5257.jpg","HHH_5264.jpg","HHH_5273.jpg","HHH_5366.jpg","HHH_5421.jpg",
-    "HHH_5464.jpg","HHH_5495.jpg","HHH_5532.jpg","HHH_5638.jpg","HHH_5701.jpg",
-    "HHH_5721.jpg","HHH_5731.jpg","HHH_5862.jpg","HHH_5925.jpg","HHH_5965.jpg"
-  ];
+  "HHH_3774.jpg","HHH_4143.jpg","HHH_4374.jpg","HHH_4664.jpg","HHH_4974.jpg","HHH_5225.jpg","HHH_5366.jpg","HHH_5701.jpg","HHH_5862.jpg"
+];
   const galleryEl = document.getElementById('gallery');
   WED_PHOTOS.forEach(name => {
     const a = document.createElement('div');
