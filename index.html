@@ -253,10 +253,16 @@
   .story-img:active{ transform:scale(.985); }
   .story-num{ margin-top:14px; font-size:11px; letter-spacing:.4em; color:var(--gold); }
 
+  .story-text{
+    max-width:460px; margin:40px auto 0; font-size:15px; color:var(--ink);
+    line-height:2.5; letter-spacing:.08em;
+  }
+  .story-text p{ margin:0 0 4px; }
+
   /* 故事轮播 */
   .story-swiper{
     display:flex; overflow-x:auto; scroll-snap-type:x mandatory; gap:12px;
-    margin:0 -26px; padding:2px 26px 12px;
+    margin:34px -26px 0; padding:2px 26px 12px;
     scrollbar-width:none; -webkit-overflow-scrolling:touch;
     touch-action:pan-x;   /* 横向手势滑动轮播，纵向手势滚动页面 */
   }
@@ -379,87 +385,31 @@
   <div class="wrap center">
     <div class="sec-tag reveal">01 · Our Story</div>
     <h2 class="sec-title reveal d1">我们的故事</h2>
-    <p class="reveal d2" style="margin-top:14px; font-size:13px; color:var(--ink-soft); letter-spacing:.08em;">
-      从校园到婚礼，我们走过的每一步
-    </p>
 
-    <div class="story">
-      <!-- 文案为示例，可按你们真实的经历修改 -->
-      <div class="story-item reveal">
-        <div class="story-swiper">
-          <div class="story-slide"><img class="story-img" src="photos/story/school_1.jpg" alt="那年校园" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/school_2.jpg" alt="那年校园" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/school_3.jpg" alt="那年校园" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/school_4.jpg" alt="那年校园" loading="lazy"></div>
-        </div>
-        <div class="story-num">Chapter 01 · 青春</div>
-        <h3>初遇</h3>
-        <p>故事从校园开始，从一句简单的问候，到往后所有的岁月。</p>
-      </div>
+    <div class="story-text reveal d2">
+      <p>我们在校园相遇，从一句问候开始；</p>
+      <p>后来一起工作、一起成长，把日子过成了想要的样子；</p>
+      <p>走过千山万水，也走进彼此的故乡；</p>
+      <p>如今，我们决定携手，走进婚姻，共度余生。</p>
+    </div>
 
-      <div class="story-item reveal">
-        <div class="story-swiper">
-          <div class="story-slide"><img class="story-img" src="photos/story/car.jpg" alt="第一辆车" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/cat.jpg" alt="家里的小猫" loading="lazy"></div>
-        </div>
-        <div class="story-num">Chapter 02 · 日常</div>
-        <h3>烟火</h3>
-        <p>一辆车、一只猫，我们慢慢地，把「我」过成了「我们」。</p>
-      </div>
-
-      <div class="story-item reveal">
-        <div class="story-swiper">
-          <div class="story-slide"><img class="story-img" src="photos/story/travel_1.jpg" alt="一起看世界" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/travel_2.jpg" alt="一起看世界" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/travel_3.jpg" alt="一起看世界" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/travel_4.jpg" alt="一起看世界" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/travel_5.jpg" alt="一起看世界" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/travel_6.jpg" alt="一起看世界" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/travel_7.jpg" alt="一起看世界" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/travel_8.jpg" alt="一起看世界" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/travel_9.jpg" alt="一起看世界" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/travel_10.jpg" alt="一起看世界" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/travel_11.jpg" alt="一起看世界" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/travel_12.jpg" alt="一起看世界" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/travel_13.jpg" alt="一起看世界" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/travel_14.jpg" alt="一起看世界" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/travel_15.jpg" alt="一起看世界" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/travel_16.jpg" alt="一起看世界" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/travel_17.jpg" alt="一起看世界" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/travel_18.jpg" alt="一起看世界" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/travel_19.jpg" alt="一起看世界" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/travel_20.jpg" alt="一起看世界" loading="lazy"></div>
-        </div>
-        <div class="story-num">Chapter 03 · 远方</div>
-        <h3>同行</h3>
-        <p>世界很大，幸好有你——一起看过的风景，都值得收藏。</p>
-      </div>
-
-      <div class="story-item reveal">
-        <div class="story-swiper">
-          <div class="story-slide"><img class="story-img" src="photos/story/home_xuanen_1.jpg" alt="宣恩" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/home_xuanen_2.jpg" alt="宣恩" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/home_yueyang.jpg" alt="岳阳" loading="lazy"></div>
-        </div>
-        <div class="story-num">Chapter 04 · 故乡</div>
-        <h3>归途</h3>
-        <p>去你的宣恩，也去我的岳阳——从此故乡是两个地方，却都是回家的方向。</p>
-      </div>
-
-      <div class="story-item reveal">
-        <div class="story-swiper">
-          <div class="story-slide"><img class="story-img" src="photos/story/vow_dinghun.jpg" alt="订婚" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/vow_lingzheng_1.jpg" alt="领证" loading="lazy"></div>
-          <div class="story-slide"><img class="story-img" src="photos/story/vow_lingzheng_2.jpg" alt="领证" loading="lazy"></div>
-        </div>
-        <div class="story-num">Chapter 05 · 相守</div>
-        <h3>约定</h3>
-        <p>从订婚到领证，我们把承诺写进红本本，也把余生说给你听。</p>
-      </div>
+    <!-- 精选照片 · 从校园到婚姻的完整历程（可左右滑动） -->
+    <div class="story-swiper reveal d2">
+      <div class="story-slide"><img class="story-img" src="photos/story/school_1.jpg" alt="校园初遇" loading="lazy"></div>
+      <div class="story-slide"><img class="story-img" src="photos/story/school_2.jpg" alt="校园" loading="lazy"></div>
+      <div class="story-slide"><img class="story-img" src="photos/story/car.jpg" alt="一起奋斗" loading="lazy"></div>
+      <div class="story-slide"><img class="story-img" src="photos/story/cat.jpg" alt="生活烟火" loading="lazy"></div>
+      <div class="story-slide"><img class="story-img" src="photos/story/travel_1.jpg" alt="一起看世界" loading="lazy"></div>
+      <div class="story-slide"><img class="story-img" src="photos/story/travel_3.jpg" alt="一起看世界" loading="lazy"></div>
+      <div class="story-slide"><img class="story-img" src="photos/story/travel_5.jpg" alt="一起看世界" loading="lazy"></div>
+      <div class="story-slide"><img class="story-img" src="photos/story/home_xuanen_1.jpg" alt="你的故乡" loading="lazy"></div>
+      <div class="story-slide"><img class="story-img" src="photos/story/home_yueyang.jpg" alt="我的故乡" loading="lazy"></div>
+      <div class="story-slide"><img class="story-img" src="photos/story/vow_dinghun.jpg" alt="订婚" loading="lazy"></div>
+      <div class="story-slide"><img class="story-img" src="photos/story/vow_lingzheng_1.jpg" alt="领证" loading="lazy"></div>
+      <div class="story-slide"><img class="story-img" src="photos/story/vow_lingzheng_2.jpg" alt="领证" loading="lazy"></div>
     </div>
   </div>
 </section>
-
 <!-- ================= 02 敬邀见证 ================= -->
 <section class="vows">
   <div class="wrap center">
