@@ -88,7 +88,7 @@
   }
   .hero-names{
     font-family:var(--serif); font-weight:500;
-    font-size:clamp(44px, 13vw, 72px); letter-spacing:.06em; line-height:1.1;
+    font-size:clamp(34px, 10vw, 58px); letter-spacing:.06em; line-height:1.25; white-space:nowrap;
   }
   .hero-names .amp{ font-style:italic; font-size:.72em; color:var(--gold); padding:0 .18em; }
   .hero-cn{ margin-top:20px; font-size:14px; letter-spacing:.42em; color:var(--ink-soft); text-indent:.42em; }
@@ -612,12 +612,31 @@ const STORAGE_KEY = "wedding_blessings_xuwen_liyangyu";
   const bgm = document.getElementById('bgm');
   btn.style.display = 'flex';
   bgm.src = MUSIC_SRC;
+  bgm.load();
+  let playing = false, retried = false;
+
+  // 等待缓冲完成后播放（避免大文件未就绪时 play() 失败）
+  function waitAndPlay(){
+    if(retried) return;
+    retried = true;
+    const once = () => {
+      bgm.play().then(() => { playing = true; btn.classList.add('playing'); }).catch(() => {});
+    };
+    if(bgm.readyState >= 3) once();
+    else { bgm.addEventListener('canplay', once, { once:true }); bgm.addEventListener('error', once, { once:true }); }
+  }
+  function tryPlay(){
+    const p = bgm.play();
+    if(p) p.then(() => { playing = true; btn.classList.add('playing'); })
+          .catch(() => waitAndPlay());
+  }
+
   btn.addEventListener('click', () => {
-    if(bgm.paused){
-      bgm.play().then(() => btn.classList.add('playing'))
-         .catch(() => alert('音乐加载失败，请检查音频文件路径'));
+    if(!playing){
+      if(bgm.readyState >= 2) tryPlay();   // 已缓冲，直接播放（iOS 需在用户手势内调用）
+      else { bgm.load(); waitAndPlay(); }  // 未就绪，缓冲后再播
     } else {
-      bgm.pause(); btn.classList.remove('playing');
+      bgm.pause(); playing = false; btn.classList.remove('playing');
     }
   });
 })();
